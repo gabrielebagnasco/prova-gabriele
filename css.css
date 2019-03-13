@@ -1,0 +1,152 @@
+h1{
+	color:red;
+	font-size:xx-large;
+	font-family:algerian;
+	vertical-align:top;
+    text-align:center;
+}
+
+body{
+    background-color: ffd000;
+}
+
+a:link{
+	color:black;
+	text-decoration:none;
+}
+
+a:visited{
+	color:black;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+.chi_siamo img{
+    padding-right: 5%;
+}
+
+.menu, .menu ul, .menu a{
+	margin:0px;
+	padding:0px;
+	border:none;
+	 /*che l'è???*/
+}
+
+/*Posizionamento*/
+
+ul.menu {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/*Menu*/
+.menu {
+	background-color:#333333;	
+	height:40px;
+	width:800px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.menu li{
+	list-style-type:none;
+	float:left;
+	position:relative; /* per far stare le sotto voci una sotto all'altra */
+}
+
+/*Links*/
+.menu li a{
+	display:block;
+	text-decoration:none;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding:0px 65px;
+	margin-left:auto;
+	margin-right:auto;
+	line-height: 35px;
+	transition:color .3s ease;
+	-moz-transition:color .3s ease;
+	-webkit-transition:color .3s ease;		
+}
+
+.menu li:first-child a {border-left:none;}
+.menu li:last-child a {border-right:none;}
+.menu li:hover > a {color:#990000;}
+
+/*Sotto Menu*/
+
+.menu ul{
+	position:absolute;
+	opacity:0; /*affinchè le voci sotto non si vedano*/
+	background:#CCCCCC;
+	transition:opacity .55s ease .1s;
+	-moz-transition:opacity .55s ease .1s;
+	-webkit-transition:opacity .55s ease .1s;
+	background: #333333
+}
+
+.menu li:hover > ul{ /*quando ci passi sorpa trasofrma l'elemento in una lista*/
+	opacity:1;
+}
+
+.menu ul li{/*quando passo sotto il menù, non compare la lista*/
+	height:0;
+	overflow:hidden;
+	padding:0px;	
+}
+
+.menu li:hover > ul li{
+	height:auto;
+	overflow:visible;
+}
+
+.menu ul li a {
+	width:200px;
+	margin:0px;
+	padding:5px 10px;
+	border:none;
+}
+
+/*slider*/
+
+.slider {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+	display:flex;
+	padding-left:25%;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+    width: 50%;
+    height: 50%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
